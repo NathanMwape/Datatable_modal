@@ -1,0 +1,76 @@
+        /* Adjust table and container padding for a cleaner look */
+        .container {
+          max-width: 1200px;
+      }
+
+      table {
+          width: 100%;
+      }
+
+      /* Add space between buttons */
+      .dt-buttons .btn {
+          margin-right: 5px;
+      }
+
+      /* Make the action buttons smaller and more compact */
+      .btn-primary {
+          padding: 0.375rem 0.75rem;
+          font-size: 0.875rem;
+      }
+
+      /* Adjust table padding for smaller screens */
+      @media (max-width: 768px) {
+          table.table {
+              font-size: 0.9rem;
+          }
+      }
+
+      /* Style général pour tous les boutons d'exportation */
+.dt-buttons .btn {
+background-color: #28a745; /* Couleur de fond verte */
+color: white; /* Couleur du texte */
+border-color: #28a745; /* Couleur de la bordure */
+padding: 5px 10px; /* Réduit l'espace à l'intérieur des boutons */
+font-size: 0.875rem; /* Réduit la taille du texte */
+border-radius: 5px; /* Ajoute un léger arrondi */
+}
+
+/* Style pour le bouton CSV */
+.dt-buttons .buttons-csv {
+background-color: #17a2b8; /* Couleur de fond bleue */
+border-color: #17a2b8;
+}
+
+/* Style pour le bouton Excel */
+.dt-buttons .buttons-excel {
+background-color: #e6bc3e; /* Couleur de fond jaune */
+border-color: #e6bc3e;
+}
+
+/* Style pour le bouton PDF */
+.dt-buttons .buttons-pdf {
+background-color: #dc3545; /* Couleur de fond rouge */
+border-color: #dc3545;
+}
+
+/* Ajouter des effets au survol */
+.dt-buttons .btn:hover {
+background-color: #218838; /* Couleur au survol */
+border-color: #1e7e34;
+}
+
+/* Survol spécifique pour chaque bouton */
+.dt-buttons .buttons-csv:hover {
+background-color: #138496;
+border-color: #117a8b;
+}
+
+.dt-buttons .buttons-excel:hover {
+background-color: #e6bc3e;
+border-color: #e6bc3e;
+}
+
+.dt-buttons .buttons-pdf:hover {
+background-color: #c82333;
+border-color: #bd2130;
+}
