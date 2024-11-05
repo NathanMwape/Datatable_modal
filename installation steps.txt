@@ -1,0 +1,122 @@
+----------------
+INSTALLATION STEPS
+----------------
+
+1. CREATE VIRTUAL ENV
+   python -m venv venv
+
+2. ACTIVATE VIRTUAL ENV
+   venv\Scripts\activate   # On Windows
+   \venv\Scripts\activate  # On Linux 
+
+3.INSTALL DJANGO
+  pip install Django
+  python -m django --version
+
+4.START NEW PROJECT
+  cd venv
+  django-admin startproject yourprojectname
+
+5.ENTER YOUR PROJECT
+  cd yourprojectname
+
+6.START NEW APP
+  python manage.py startapp yourappname
+
+7. INSTALL ADMIN LTE THEME
+   pip install django-admin-adminlte  (FULL:  https://pypi.org/project/django-admin-adminlte/)
+   pip install django-adminlte3       (FEW: https://pypi.org/project/django-adminlte-3/)
+
+8.  PATH TO PROJECT URLS
+    path('', include('admin_adminlte.urls')),
+
+9.  ADD ADMIN APP THEME TO SETTINGS
+    admin_adminlte.apps.AdminAdminlteConfig
+
+10.  DATABASE CONNECTION
+    pip install mysql
+    pip install mysql-client
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'adminlte3',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
+
+11. python manage.py migrate
+11. python manage.py createsuperuser
+12. python manage.py runserver
+
+----------------
+ADDITIONAL 
+----------------
+
+settings.py
+
+STATIC_URL = 'static/'
+import os
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+LOGIN_REDIRECT_URL='/'
+
+
+urls.py
+
+from django.conf import settings
+from django.conf.urls.static import static
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Add static files serving during development
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+----------------
+OTHER LIBRARIES:
+----------------
+
+pip install django-bootstrap-datepicker-plus
+pip install pillow
+pip install mysql
+pip install plotly
+pip install spicy
+pip install pandas
+
+----------------
+THANKYOU
+----------------
+appreciate my work,  like, share  and subscribe
+my contacts:
+whatsapp +255675839840
+dodoma Tanzania  (East Africa)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chart
+https://codeium.com/live/general
+
+Site
+https://youtu.be/U_gxmA_A5Ds
+
+chagua IDE
+https://codeium.com/download
